@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>
+      neem contact op
+    </h1>
+    <h4>
+      vul elke shit in in dit formulier (we hebben toch geen server)
+    </h4>
+    <br>
+    <p>
+      voornaam
+    </p>
+    <input>
+    <br>
+    <p>
+      achternaam
+    </p>
+    <input>
+    <br>
+    <p>
+      e-mail
+    </p>
+    <input type="email">
+    <br>
+    <p>
+      bericht
+    </p>
+    <textarea spellcheck="true" required="true"></textarea>
+    <br>
+    <br>
+    <button id="sent">verzenden</button> 
+    <div id="sentdiv"></div>
+    <script>
+        document.getElementById("sent").onclick =
+            function(){
+          document.getElementById("sentdiv").innerHTML = "uw bericht is succesvol verzonden! we nemen snel contact met u op!"
+          setTimeout(
+            function(){
+              alert("ERR: no ip linked to given DNS. \nthis is how the server responded: \nEER0X12AF3D&IP=___.___.__._&STATUS=\"NOT_SENT\"");
+            },500
+          )
+      };
+    </script>
+  </body>
+</html>
