@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #box{
+        height:128px;
+        width: 128px;
+        border:solid;
+        background-color:#fafafa;
+      }
+      </style>
+    </head>
+    <body>
+      <div id="all">
+      <h1>houd de box ingedrukt</h1>
+      <br>
+      <div id="box"></div>
+      <div id="scan"></div>
+      </div>
+      <script>
+        let score;
+        if(localStorage.getItem("score") == null){
+        score = Math.ceil(Math.random() * 100);
+        localStorage.setItem("score",score)}
+        else{
+          score = localStorage.getItem("score")
+        }
+        document.getElementById("box").onmousedown = function(){
+          document.getElementById("scan").innerHTML = "scanning..."
+          setTimeout(
+            function(){
+              document.getElementById("all").innerHTML = "analysing..."
+              setTimeout(
+                function(){
+                  document.getElementById("all").innerHTML = "                  <h1>jouw resultaten(schaalvan 1-100):</h1><br><h3>skeerheidsscore:</h3>" + score;
+                },500
+              )
+            },2000
+          )
+        }
+                </script>
+      </body>
+  </html>
